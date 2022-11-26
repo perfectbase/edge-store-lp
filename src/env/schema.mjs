@@ -7,6 +7,9 @@ import { z } from "zod";
  */
 export const serverSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]),
+  MAILERLITE_KEY: z.string(),
+  FREE_WAITING_SUBSCRIPTION_GROUP_ID: z.string(),
+  PAYED_WAITING_SUBSCRIPTION_GROUP_ID: z.string(),
 });
 
 /**
@@ -15,7 +18,7 @@ export const serverSchema = z.object({
  * To expose them to the client, prefix them with `NEXT_PUBLIC_`.
  */
 export const clientSchema = z.object({
-  // NEXT_PUBLIC_CLIENTVAR: z.string(),
+  NEXT_PUBLIC_GOOGLE_ANALYTICS: z.string(),
 });
 
 /**
@@ -25,5 +28,5 @@ export const clientSchema = z.object({
  * @type {{ [k in keyof z.infer<typeof clientSchema>]: z.infer<typeof clientSchema>[k] | undefined }}
  */
 export const clientEnv = {
-  // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
+  NEXT_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
 };
