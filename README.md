@@ -1,1 +1,1 @@
-# EdgeStore Landing Page
+# Edge Store Landing Page
