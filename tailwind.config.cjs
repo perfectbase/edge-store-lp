@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const theme = require("./src/utils/theme.cjs");
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,9 +11,10 @@ module.exports = {
         primary: theme.primary,
       },
       fontFamily: {
-        sans: ["futura", "sans-serif"],
+        sans: ["var(--font-main)", ...fontFamily.sans],
+        hand: ["var(--font-hand)", ...fontFamily.sans],
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

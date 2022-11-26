@@ -8,28 +8,26 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Edge Store</title>
         <meta
           name="description"
-          content="A simple image store for all project sizes. It is designed to be easy to use and easy to integrate into your project. It is built leveraging s3, cloudfront and lambda@edge to give you a fast, reliable and secure image store."
+          content="A simple image storage for all project sizes. It is designed to be easy to use and easy to integrate into your project. It is built leveraging s3, cloudfront and lambda@edge to give you a fast, reliable and secure image store."
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex min-h-screen flex-col items-center text-white">
         <div className="flex w-full flex-col items-center justify-center bg-[radial-gradient(#1F0B3E,#000000)] py-28 px-3">
           <h1 className="pb-3 text-center text-5xl md:text-7xl">EDGE STORE</h1>
           <h2 className="pb-3 text-center text-lg text-gray-300 md:text-2xl">
-            The image store all developers dream of.
+            The image storage all developers dream of.
           </h2>
           <h3 className="pb-6 text-center text-sm text-gray-300 md:text-base">
             Working with images should be easy.
           </h3>
-          <Button>JOIN OUR WAITING LIST</Button>
+          <JoinButton />
         </div>
         <div className="flex w-full justify-center bg-[#1F0B3E] py-10 px-3 text-center">
           <div className="max-w-4xl">
-            <p className="pb-4 font-sans text-xl font-bold">Why Edge Store?</p>
+            <p className="pb-4 text-xl font-bold">Why Edge Store?</p>
             <p>
               Edge Store is a simple image store for all project sizes. It is
               designed to be easy to use and easy to integrate into your
@@ -131,7 +129,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="mb-16">
-          <Button>JOIN OUR WAITING LIST</Button>
+          <JoinButton />
         </div>
         <div className="h-14 w-full bg-[#1A1A1A]"></div>
       </main>
@@ -148,7 +146,11 @@ const TechCard: React.FC<{ title: string; description: string }> = ({
   return (
     <div className="my-4 min-h-[170px] w-[90%] rounded-lg p-6 shadow-[0px_0px_19px_3px_#7C3AED60] md:w-[30%]">
       <p className="mb-2 text-lg font-bold">{title}</p>
-      <p className="text-sm">{description}</p>
+      <p className="text-gray-400">{description}</p>
     </div>
   );
+};
+
+const JoinButton: React.FC = () => {
+  return <Button href="/subscribe">JOIN OUR WAITING LIST</Button>;
 };
