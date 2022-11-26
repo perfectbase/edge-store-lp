@@ -26,11 +26,14 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+          const host = window.location.hostname;
+          if(host != "localhost") {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+  
+            gtag('config', '${env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+          }
         `}
       </Script>
       <Head>

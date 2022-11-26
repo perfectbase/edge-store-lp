@@ -8,9 +8,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
+        <title>{"Easily handle images in your app - Edge Store"}</title>
         <meta
           name="description"
-          content="A simple image storage for all project sizes. It is designed to be easy to use and easy to integrate into your project. It is built leveraging s3, cloudfront and lambda@edge to give you a fast, reliable and secure image store."
+          content="A simple image storage for all project sizes. Easily integrate with your existing projects. Fast, reliable and secure."
         />
       </Head>
 
