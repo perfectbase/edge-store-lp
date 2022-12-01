@@ -66,7 +66,7 @@ const Page: NextPage = () => {
               error={errors.email?.message}
             />
             <Checkbox id="test" {...register("pay")}>
-              Pre-pay a one time fee of $5 and get a lifetime 100% storage
+              Pre-pay a one time fee of $5 and get a lifetime double storage
               increase in you free plan account.
             </Checkbox>
             <div className="mt-4 flex justify-end gap-2">

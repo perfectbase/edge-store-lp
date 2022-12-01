@@ -153,5 +153,5 @@ const TechCard: React.FC<{ title: string; description: string }> = ({
 };
 
 const JoinButton: React.FC = () => {
-  return <Button href="/subscribe">JOIN OUR WAITING LIST</Button>;
+  return <Button href="/subscribe">APPLY FOR EARLY ACCESS</Button>;
 };
